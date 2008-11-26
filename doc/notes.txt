@@ -1,21 +1,17 @@
-James Smith (st23am@gmail.com)
-Bill Barnett (bill@agilo.us)
 COMMON BASE:
-------------
 
  * rails
  * git
  * vanilla test/unit (as group)
  * 100% coverage
 
+Ideas:
 
-------------
  Schedule
  RSVP system
  Newbie night
  Alternating locations(?)
  Kids night
-
 
 APP IDEAS:
 
@@ -24,15 +20,9 @@ APP IDEAS:
     - Maintaining schedule
  * Code collaboration (like github.com/zachinglis/holler)
 
-
-github pass - 8598664321
-gmail pass  - wibble08
-gmail pass  - wibble08
-
 git commands:
 
-git status
-git add {filename}
-git commit -m "message"
-git push
-=======
+ * git status
+ * git add {filename}
+ * git commit -m "message"
+ * git push
