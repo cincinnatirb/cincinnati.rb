@@ -7,4 +7,8 @@ class EventTest < Test::Unit::TestCase
     assert event.valid?
   end
 
+  def test_event_should_be_invalid_without_date
+    event = Event.new
+    assert !event.valid?
+  end
 end
