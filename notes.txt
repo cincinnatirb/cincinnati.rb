@@ -26,4 +26,11 @@ APP IDEAS:
 
 
 github pass - 8598664321
+<<<<<<< HEAD:notes.txt
 gmail pass  - wibble08
+=======
+gmail pass  - wibble08
+
+
+updated by Dave
+>>>>>>> 49f0bbe5804c06d9468f07bd942c2ef5cdfaf591:notes.txt
