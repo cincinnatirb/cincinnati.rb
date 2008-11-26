@@ -1,4 +1,4 @@
-class Event
+class Event < ActiveRecord::Base
   
   def valid?
     true
