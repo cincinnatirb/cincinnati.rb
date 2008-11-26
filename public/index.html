@@ -1,274 +1,94 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-  <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <title>Ruby on Rails: Welcome aboard</title>
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
-      
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
-      
-      a  {color: #03c}
-      a:hover {
-        background-color: #03c;
-        color: white;
-        text-decoration: none;
-      }
-      
-      
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
-      }
-      
-      #sidebar {
-        float: right;
-        width: 175px;
-      }
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-      #footer {
-        clear: both;
-      }
-      
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>Cincinnati Ruby Brigade</title>
+   <meta name="author" content="" />
 
-      #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
-      }
+   <!--- Blueprint CSS Framework -->
+   <link rel="stylesheet" href="/css/blueprint/screen.css" type="text/css" media="screen, projection" />
+   <link rel="stylesheet" href="/css/blueprint/print.css" type="text/css" media="print" />
 
+   <!-- CodeRay syntax highlighting CSS -->
+   <link rel="stylesheet" href="/css/coderay.css" type="text/css" />
 
-      #header {
-        background-image: url("images/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
-      }
-      #header h1, #header h2 {margin: 0}
-      #header h2 {
-        color: #888;
-        font-weight: normal;
-        font-size: 16px;
-      }
-      
-      
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-      
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -11px;
-      }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
-      }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
-      
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
-      
-      
-      #getting-started {
-        border-top: 1px solid #ccc;
-        margin-top: 25px;
-        padding-top: 15px;
-      }
-      #getting-started h1 {
-        margin: 0;
-        font-size: 20px;
-      }
-      #getting-started h2 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
-      }
-      #getting-started ol {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #getting-started li {
-        font-size: 18px;
-        color: #888;
-        margin-bottom: 25px;
-      }
-      #getting-started li h2 {
-        margin: 0;
-        font-weight: normal;
-        font-size: 18px;
-        color: #333;
-      }
-      #getting-started li p {
-        color: #555;
-        font-size: 13px;
-      }
-      
-      
-      #search {
-        margin: 0;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: 11px;
-      }
-      #search input {
-        font-size: 11px;
-        margin: 2px;
-      }
-      #search-text {width: 170px}
-      
-      
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
-        margin-bottom: 5px;
-      }
-      
-    </style>
-    <script type="text/javascript" src="javascripts/prototype.js"></script>
-    <script type="text/javascript" src="javascripts/effects.js"></script>
-    <script type="text/javascript">
-      function about() {
-        if (Element.empty('about-content')) {
-          new Ajax.Updater('about-content', 'rails/info/properties', {
-            method:     'get',
-            onFailure:  function() {Element.classNames('about-content').add('failure')},
-            onComplete: function() {new Effect.BlindDown('about-content', {duration: 0.25})}
-          });
-        } else {
-          new Effect[Element.visible('about-content') ? 
-            'BlindUp' : 'BlindDown']('about-content', {duration: 0.25});
-        }
-      }
-      
-      window.onload = function() {
-        $('search-text').value = '';
-        $('search').onsubmit = function() {
-          $('search-text').value = 'site:rubyonrails.org ' + $F('search-text');
-        }
-      }
-    </script>
-  </head>
-  <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <form id="search" action="http://www.google.com/search" method="get">
-              <input type="hidden" name="hl" value="en" />
-              <input type="text" id="search-text" name="q" value="site:rubyonrails.org " />
-              <input type="submit" value="Search" /> the Rails site
-            </form>
-          </li>
-        
-          <li>
-            <h3>Join the community</h3>
-            <ul class="links">
-              <li><a href="http://www.rubyonrails.org/">Ruby on Rails</a></li>
-              <li><a href="http://weblog.rubyonrails.org/">Official weblog</a></li>
-              <li><a href="http://wiki.rubyonrails.org/">Wiki</a></li>
-            </ul>
-          </li>
-          
-          <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://stdlib.rubyonrails.org/">Ruby standard library</a></li>
-              <li><a href="http://corelib.rubyonrails.org/">Ruby core</a></li>
-            </ul>
-          </li>
-        </ul>
+   <!-- Homepage CSS -->
+   <link rel="stylesheet" href="/css/site.css" type="text/css" media="screen, projection" />
+</head>
+<body>
+
+<div class="container">
+
+   <div class="column span-20 prepend-2 append-2 first last" id="header">
+     <img src="cincinnati_rb.gif">
+     <hr>
+   </div>
+
+   <div class="column span-15 prepend-2 first">
+      <p class="title">Cincinnati Ruby Brigade</p>
+<h3>Objective</h3>
+<p>The time has come for a Cincinnati.rb.</p>
+<p><a href="http://www.ruby-lang.org/en/">Ruby</a> rocks. <a href="http://rubyonrails.org">Rails</a> rocks. Hacking with a group of people rocks, it accelerates the learning curve. We created Cincinnati.rb to provide a frequent Ruby hacking opportunity to all those interested.</p>
+<p>Come one, come all, it’s open hacking night every night &#8212; we’re going to let the meeting drive itself to wherever it wants to go.</p>
+<h3>Location</h3>
+<p><strong>Our meeting location has changed!</strong></p>
+<p>We will be meeting in the SAP Lab conference room in the basement of the UC College of Business.</p>
+<p>As you enter the building locate the elevators or stairs and go down to the basement.  You should quickly stumble upon the SAP Lab with lots of little desks/tables and rooms surrounding the perimeter.  In the back right corner of the lab is the conference room, we will be meeting there.</p>
+<h4>Parking</h4>
+<p>I imagine on-street parking in the area will be limited due to night classes, but you may be able to find a spot for free if you don&#8217;t mind a little walk.  Otherwise there are two garages right near the College of Business, which you can pay to park.  I&#8217;d recommend the Campus Green garage on your left if you turn in on Woodside Drive.  There is also another garage on the right next to Langsam Library, but I cannot remember what it is called.</p>
+<p><strong>Do not park in Burnett Woods, the park on the other side of Martin Luther King Dr.  Most of the parking there is for permit holders only and you will be ticketed, trust me.</strong></p>
+<p><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;hl=en&amp;geocode=&amp;q=2925+Campus+Green+Drive&amp;sll=39.195974,-84.409468&amp;sspn=0.274585,0.674286&amp;ie=UTF8&amp;ll=39.142842,-84.510098&amp;spn=0.008588,0.021071&amp;z=14&amp;msa=0&amp;msid=116977732743175510207.00044221c56efab307161&amp;output=embed&amp;s=AARTsJr_UFmGzw_4hKR09l-JnKFaIIbtFw"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;hl=en&amp;geocode=&amp;q=2925+Campus+Green+Drive&amp;sll=39.195974,-84.409468&amp;sspn=0.274585,0.674286&amp;ie=UTF8&amp;ll=39.142842,-84.510098&amp;spn=0.008588,0.021071&amp;z=14&amp;msa=0&amp;msid=116977732743175510207.00044221c56efab307161&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small></p>
+<h3>Links</h3>
+<ul>
+	<li><a href="http://groups.google.com/group/cincinnatirb/">Google group</a></li>
+	<li><a href="http://groups.google.com/group/cincinnatirb/members">Members list</a></li>
+</ul>
+<h3>About Ruby</h3>
+<ul>
+	<li><a href="http://www.ruby-lang.org/en/">Ruby Homepage</a></li>
+	<li><a href="http://tryruby.hobix.com/">Try Ruby</a></li>
+</ul>
+   </div>
+
+   <div class="column span-5 append-2 last">
+
+			<div class="box meeting">
+				Next Meeting:<br />				
+				<b>Tuesday<br />
+				November 25th, 2008</b><br />
+				6:30pm - 8:30pm<br />
+				Open hacking<br />
+				<a href="mailto:wwwguru@gmail.com">Email us if you're coming</a>.
+			</div>
+
+      <div class="box">
+        <p>
+					<b>Meetings most Tuesdays</b>
+				</p>
+      <p class="small quiet last">
+				We meet on all Tuesdays except the first Tuesday of each month, in deference to the
+				 excellent <a href="http://agileroundtable.org/">Agile Roundtable</a> meetings, which 
+				you should also attend.
+			</p>
       </div>
 
-      <div id="content">
-        <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
-        </div>
+			<div class="box" style="background:#fed;">
+				Want more information?<br />
+				<a href="mailto:wwwguru@gmail.com">Drop Ryan an email</a>.
+			</div>
+     
+   </div>
 
-        <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-          <div id="about-content" style="display: none"></div>
-        </div>
-        
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
-          
-          <ol>          
-            <li>
-              <h2>Use <tt>script/generate</tt> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
-            </li>
-            
-            <li>
-              <h2>Set up a default route and remove or rename this file</h2>
-              <p>Routes are set up in config/routes.rb.</p>
-            </li>
+   <div class="column span-20 prepend-2 append-2 first last" id="footer">
+     <hr />
+     <p class="small">
+			Created with <a href="http://webby.rubyforge.org">Webby</a>.
+			Full source from this site available at <a href="http://github.com/ryw/cincinnati.rb">http://github.com/ryw/cincinnati.rb</a>.
+		 </p>
+   </div>
 
-            <li>
-              <h2>Create your database</h2>
-              <p>Run <tt>rake db:migrate</tt> to create your database. If you're not using SQLite (the default), edit <tt>config/database.yml</tt> with your username and password.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-      
-      <div id="footer">&nbsp;</div>
-    </div>
-  </body>
+</div>
+</body>
 </html>
