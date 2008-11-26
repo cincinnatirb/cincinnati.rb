@@ -26,3 +26,11 @@ APP IDEAS:
 
 github pass - 8598664321
 gmail pass  - wibble08
+
+
+git commands:
+
+git status
+git add {filename}
+git commit -m "message"
+git push
