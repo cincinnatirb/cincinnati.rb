@@ -1,7 +1,5 @@
 class Event < ActiveRecord::Base
   
-  def valid?
-    true
-  end
+  validates_presence_of :date
   
 end
