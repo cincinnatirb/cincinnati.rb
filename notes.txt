@@ -1,4 +1,5 @@
-
+James Smith (st23am@gmail.com)
+Bill Barnett (bill@agilo.us)
 COMMON BASE:
 ------------
 
@@ -26,7 +27,7 @@ APP IDEAS:
 
 github pass - 8598664321
 gmail pass  - wibble08
-
+gmail pass  - wibble08
 
 git commands:
 
@@ -34,3 +35,4 @@ git status
 git add {filename}
 git commit -m "message"
 git push
+=======
