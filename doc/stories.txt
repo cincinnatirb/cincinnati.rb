@@ -6,3 +6,5 @@
 * Admin can update events (requires authentication)
 * Admin can delete events (requires authentication)
 * Google group members can RSVP
+
+* iPhone version
