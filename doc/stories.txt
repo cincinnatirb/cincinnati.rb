@@ -1,7 +1,10 @@
 
-* Home page info transferred over
+* Home page info transferred over   **** DONE!!!!!!
 
-* People can view schedule
-* People can RSVP
-* Admin can edit schedule
+
+* Admin can create events (requires authentication)
+* Anyone can view events (requires authentication)
+* Admin can update events (requires authentication)
+* Admin can delete events (requires authentication)
+* Google group members can RSVP
 
