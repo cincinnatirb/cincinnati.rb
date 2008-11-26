@@ -6,6 +6,6 @@
 * Admin can update events (requires authentication)
 * Admin can delete events (requires authentication)
 * Google group members can RSVP
-* View twitterfeed from all members
-
-* iPhone version
+* View aggregated twitterfeed from all members
+* View aggregated blog postings from all members
+* iPhone (mobile) version
