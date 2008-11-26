@@ -1,3 +1,13 @@
+# git-ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+*~
 .DS_Store
-db/*
-log/*
+log/*.log
+tmp/**/*
+doc/api
+doc/app
+db/*.sqlite3
+coverage/*
+public/javascripts/all.js
+public/stylesheets/all.css
+TAGS
