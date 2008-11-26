@@ -1,0 +1,7 @@
+
+* Home page info transferred over
+
+* People can view schedule
+* People can RSVP
+* Admin can edit schedule
+
