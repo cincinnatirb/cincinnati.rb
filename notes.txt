@@ -1,4 +1,5 @@
 James Smith (st23am@gmail.com)
+Bill Barnett (bill@agilo.us)
 COMMON BASE:
 ------------
 
@@ -26,5 +27,3 @@ APP IDEAS:
 
 github pass - 8598664321
 gmail pass  - wibble08
-
-Bill was here!
