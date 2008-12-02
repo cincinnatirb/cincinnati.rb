@@ -1,0 +1,54 @@
+We held our 2nd Cincinnati.rb meeting last night, next meeting is December
+9th.
+
+Our first goal:
+----------------
+
+* Improve our testing skills.
+
+First project:
+----------------
+
+We considered various projects, considered dipping toe in MERB, but in the
+end decided to:
+
+* Use git & github for source control
+* Use Rails 2.1
+* Use vanilla test/unit for testing
+* No generators for anything other than migrations
+
+We decided that speed isn't the goal on the project, it's for us all to
+learn to practice true TFD as a group, maintaining 100% code coverage along
+the way.
+
+We'll build a site for Cincinnati.rb with the following stories:
+
+http://github.com/cincinnatirb/cincinnati.rb/tree/master/doc%2Fstorie...
+(ask me for github committer access if you want to add stories to the list)
+
+All members present were added as committers on the project, but we decided
+not to do any work on the project outside of the meeting, so everyone can
+see the full process of developing the app.
+
+TDD Hack Night meeting format (for next meeting):
+----------------
+
+PREP: Get your computer setup with git, connecting to the github repo, etc.
+If your computer isn't setup, you can get it ready with a member offline, or
+maybe a friendly member will sit out part of the meeting to help you get
+setup.
+
+MEETING: Everyone who has computer setup gets a turn as typist, pairing with
+the group to implement the failing test (then commit/push), and then to
+write a new failing test (then commit/push). Repeat around the table as we
+work through user stories.
+
+Ideas for other future meetings:
+----------------
+
+* Kids night
+* Newbie night
+* Q&A night -- bring your toughest ruby problems, we'll try to help you out
+(30-min limit per member) 
+* Code review night - bring your code, we'll do our best to help you improve it
+* User testing night - bring your app, we'll give you group user feedback
