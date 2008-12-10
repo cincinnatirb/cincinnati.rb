@@ -1,7 +1,7 @@
 
 * Home page info transferred over   **** DONE!!!!!!
 
-* Knowing the User/Password permits authentication
+* Knowing the User/Password permits authentication **DONE
 
 * Admin can create events (requires authentication)
 * Anyone can view events
