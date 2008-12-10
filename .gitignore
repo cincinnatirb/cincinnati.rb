@@ -13,3 +13,5 @@ coverage.*
 public/javascripts/all.js
 public/stylesheets/all.css
 TAGS
+config/admin.yml
+config/database.yml

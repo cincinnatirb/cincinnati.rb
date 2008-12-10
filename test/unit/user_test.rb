@@ -3,11 +3,11 @@ require File.dirname(__FILE__) + '/../test_helper'
 class UserTest < Test::Unit::TestCase
 
   def setup
-    @user = "admin"
-    @password = "foo"
+    @user = User::Admin['user']
+    @password = User::Admin['password']
 
-    @baduser = "harvey"
-    @badpassword = "bar"
+    @baduser = "harvey" + @user
+    @badpassword = "bar" + @password
   end
 
   def test_can_authenticate_if_user_password_is_known

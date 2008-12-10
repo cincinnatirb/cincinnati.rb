@@ -4,7 +4,7 @@
 * Knowing the User/Password permits authentication
 
 * Admin can create events (requires authentication)
-* Anyone can view events (requires authentication)
+* Anyone can view events
 * Admin can update events (requires authentication)
 * Admin can delete events (requires authentication)
 * Google group members can RSVP
