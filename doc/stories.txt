@@ -1,6 +1,8 @@
 
 * Home page info transferred over   **** DONE!!!!!!
 
+* Knowing the User/Password permits authentication
+
 * Admin can create events (requires authentication)
 * Anyone can view events (requires authentication)
 * Admin can update events (requires authentication)
@@ -9,4 +11,4 @@
 * View aggregated twitterfeed from all members
 * View aggregated blog postings from all members
 * iPhone (mobile) version
-* Register for for code review, app review, hard ruby question (maybe we do this for 1/2 hr every meeting?)
+* Register for code review, app review, hard ruby question (maybe we do this for 1/2 hr every meeting?)
