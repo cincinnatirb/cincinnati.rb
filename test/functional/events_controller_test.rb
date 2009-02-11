@@ -1,12 +1,7 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class EventsControllerTest < ActionController::TestCase
-#   def setup
-#     @controller = EventsController.new
-#     @request    = ActionController::TestRequest.new
-#     @response   = ActionController::TestResponse.new
-#   end
-
+  
   def test_non_admin_gets_prompted_for_credentials
     get :new
     assert_response :unauthorized
@@ -40,11 +35,34 @@ class EventsControllerTest < ActionController::TestCase
   end
 
   context 'when creating an event' do
-    should 'have user and password on the event create form' do
+    setup do
       get :new
-      assert_template 'new'
+    end
+    should_render_template :new
+    
+    should 'have user and password on the event create form' do
       assert_select 'input[name=user]'
       assert_select 'input[name=password]'
     end
+    
+
+    should "render event fields" do
+      should_have_fields :location_id, :start_time, :date, :topic, :duration, :for => :event
+    end
+    
   end
+      def should_have_fields(*fields)
+      options = {}
+      options = fields.pop if fields && fields.last.is_a?(Hash)
+      model = options[:for] 
+      fields.each do |field|
+        if model
+          assert_select "input[name=?]", "#{model}[#{field}]"
+        else
+          assert_select "input[name=#{field}]"  
+        end
+        
+      end
+    end
+    
 end
