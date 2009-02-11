@@ -16,5 +16,7 @@ class EventTest < Test::Unit::TestCase
     event = Event.new
     assert !event.valid?
   end
-
+  
+  should_have_db_columns :location_id, :topic, 
+                         :start_time, :duration
 end
