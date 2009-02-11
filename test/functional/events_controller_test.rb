@@ -19,7 +19,8 @@ class EventsControllerTest < ActionController::TestCase
 
   def test_admin_can_create_event
     assert_difference "Event.count" do
-      post :create, :user => User::Admin['user'], :password => User::Admin['password'], :event => {:date => '12/9/2008'}
+      post :create, :user => User::Admin['user'], :password => User::Admin['password'], :event => {:date => '12/9/2008',
+        :start_time => "18:30", :location_id => 1}
       assert_response :success
     end
   end
