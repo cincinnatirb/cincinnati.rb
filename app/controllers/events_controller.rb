@@ -1,4 +1,7 @@
 class EventsController < ApplicationController
+  def index
+  end
+
   def new
     unless User.authenticate(params[:user], params[:password])
       render :status => :unauthorized
