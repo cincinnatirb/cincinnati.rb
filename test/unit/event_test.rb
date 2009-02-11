@@ -19,4 +19,6 @@ class EventTest < Test::Unit::TestCase
   
   should_have_db_columns :location_id, :topic, 
                          :start_time, :duration
+
+  should_belong_to :location
 end
