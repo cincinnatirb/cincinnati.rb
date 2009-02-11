@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   def index
+    @events = Event.find(:all)
   end
 
   def new
@@ -7,7 +8,7 @@ class EventsController < ApplicationController
       render :status => :unauthorized
     end
   end
-  
+
   def create
     unless User.authenticate(params[:user], params[:password])
       render :status => :forbidden

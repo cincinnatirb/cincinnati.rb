@@ -31,15 +31,15 @@ class EventsControllerTest < ActionController::TestCase
     end
   end
 
-  context 'when using shoulda' do
-    should 'show events listing' do
-      setup do
-        get :index
-      end
-      should_respond_with :success
-      should_assign_to :events
+  context 'show events listing' do
+    setup do
+      get :index
     end
+    should_respond_with :success
+    should_assign_to :events
+  end
 
+  context 'when creating an event' do
     should 'have user and password on the event create form' do
       get :new
       assert_template 'new'
