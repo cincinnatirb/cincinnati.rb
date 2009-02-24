@@ -1,0 +1,11 @@
+
+TDD Hack meeting format:
+
+Everyone who has computer setup to participate in project gets a turn as typist, pairing with the group to implement the failing test (then commit/push), and then to write a new failing test (then commit/push). Repeat around the table as we work through user stories.
+
+If your computer isn't setup, you can get it ready with a member offline, or maybe a friendly member will sit out part of the meeting to help you get setup.
+
+
+Meeting IDEA:
+
+Q&A night -- bring your toughest ruby problems, we'll try to help you out (30-min limit per member)
