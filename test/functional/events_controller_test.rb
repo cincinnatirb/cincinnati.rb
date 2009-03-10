@@ -58,4 +58,15 @@ class EventsControllerTest < ActionController::TestCase
       assert_select "input[type='submit']"
     end
   end
+
+  context 'when creating an invalid event' do
+    setup do
+      post :create, :user => User::Admin['user'],
+                    :password => User::Admin['password'],
+                    :event => { :date => '12/9/2008',
+                                :start_time => "18:30" } 
+    end
+    should_render_template :new
+  end
+
 end
