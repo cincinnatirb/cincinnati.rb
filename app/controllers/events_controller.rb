@@ -14,7 +14,11 @@ class EventsController < ApplicationController
       render :status => :forbidden
       return
     end
-    Event.create! params[:event]
-    redirect_to events_path
+    @event = Event.create params[:event]
+    if @event.valid?
+      redirect_to events_path
+    else
+      render :action => "new"
+    end
   end
 end
