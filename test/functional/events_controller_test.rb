@@ -33,7 +33,7 @@ class EventsControllerTest < ActionController::TestCase
       post(:create, :user => User::Admin['user'], :password => User::Admin['password'],
            :event => {:date => '12/9/2008',
              :start_time => "18:30", :location_id => 1})
-      assert_response :success
+      assert_redirected_to events_path
     end
   end
 
