@@ -33,7 +33,7 @@ class EventsControllerTest < ActionController::TestCase
       post(:create, :user => User::Admin['user'], :password => User::Admin['password'],
            :event => {:date => '12/9/2008',
              :start_time => "18:30", :location_id => 1})
-      assert_response :success
+      assert_redirected_to events_path
     end
   end
 
@@ -53,5 +53,20 @@ class EventsControllerTest < ActionController::TestCase
 
     should_have_fields :user, :password
     should_have_fields :location_id, :start_time, :date, :topic, :duration, :for => :event
+
+    should "have a submit button" do
+      assert_select "input[type='submit']"
+    end
   end
+
+  context 'when creating an invalid event' do
+    setup do
+      post :create, :user => User::Admin['user'],
+                    :password => User::Admin['password'],
+                    :event => { :date => '12/9/2008',
+                                :start_time => "18:30" } 
+    end
+    should_render_template :new
+  end
+
 end

@@ -15,5 +15,6 @@ class EventsController < ApplicationController
       return
     end
     Event.create! params[:event]
+    redirect_to events_path
   end
 end
