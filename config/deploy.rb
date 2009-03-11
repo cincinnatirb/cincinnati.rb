@@ -1,5 +1,5 @@
 set :application, "cincinnati.rb"
-set :deploy_to, "/apps/#{application}"
+set :deploy_to, "/home/deploy/apps/#{application}"
 
 # Primary domain name of your application. Used as a default for all server roles.
 set :domain, "cincinnatirb.org"
@@ -54,7 +54,7 @@ set :apache_ctl, "/etc/init.d/apache2"
 # =============================================================================
 # SSH OPTIONS
 # =============================================================================
-ssh_options[:keys] = [File.expand_path("~/.ssh/id_dsa.pub"), File.expand_path("~/.ssh/id_rsa.pub")]
+ssh_options[:keys] = [File.expand_path("~/.ssh/id_dsa"), File.expand_path("~/.ssh/id_rsa")]
 ssh_options[:forward_agent] = true
 # ssh_options[:port] = 22
 
@@ -68,6 +68,7 @@ after 'deploy:setup', 'apache:configure_vhost'
 after 'apache:configure_vhost', 'apache:enable_site'
 after 'deploy:cold', 'apache:reload'
 after 'deploy:symlink', 'deploy:symlink_public'
+after 'deploy', 'deploy:cleanup'
 
 namespace :apache do
   desc "Configure Passenger Vhost"
