@@ -131,5 +131,7 @@ namespace :deploy do
          run "ln -nfs #{shared_path}/public/#{link} #{current_path}/public/#{link}"
        end
      end
+     run "ln -nfs #{shared_path}/config/admin.yml #{current_path}/config/admin.yml"
+     run "ln -nfs #{shared_path}/config/database.yml #{current_path}/config/database.yml"
   end
 end
