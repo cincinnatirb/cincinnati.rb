@@ -7,6 +7,7 @@ class EventsController < ApplicationController
     unless User.authenticate(params[:user], params[:password])
       render :status => :unauthorized
     end
+    @event = Event.new
   end
 
   def create
