@@ -1,4 +1,6 @@
-<% form_for :event, @event, events_path do |f| -%>
+<%= error_messages_for :event -%>
+
+<% form_for :event, @event, :url => events_path do |f| -%>
   <p>
     <label for='user'>User:</label>
     <%= text_field_tag :user %>

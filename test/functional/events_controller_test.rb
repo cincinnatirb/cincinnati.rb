@@ -49,9 +49,10 @@ class EventsControllerTest < ActionController::TestCase
     setup do
       get :new
     end
+    should_assign_to :event
     should_render_template :new
     should "post to the correct url" do
-      assert_select "form[action='?']", events_path
+      assert_select "form[action=?]", events_path
     end
     should_have_fields :user, :password
     should_have_fields :location_id, :start_time, :date, :topic, :duration, :for => :event
@@ -70,7 +71,7 @@ class EventsControllerTest < ActionController::TestCase
     should_render_template :new
 
     should "display error and retain entered values" do
-
+      assert_select ".fieldWithErrors"
     end
   end
 
