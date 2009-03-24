@@ -37,12 +37,47 @@ class EventsControllerTest < ActionController::TestCase
     end
   end
 
+  def valid_event_attributes(options = {})
+    {
+      :date => 2.days.from_now,
+      :topic => "Cincinnati.rb Rocks",
+      :start_time => Time.parse("18:30") + 2.days,
+      :duration => 2.hours,
+      :location_id => 1,
+    }.merge(options)
+  end
+
+  def test_event_should_be_valid
+    assert Event.new(valid_event_attributes).valid?
+  end
+  
   context 'show events listing' do
     setup do
       get :index
     end
     should_respond_with :success
     should_assign_to :events
+    
+    context "with events in the past, present, and future" do
+      setup do
+        @past = Event.create!(valid_event_attributes(:date => 1.days.ago))
+        @present = Event.create!(valid_event_attributes)
+        @future = Event.create!(valid_event_attributes(:date => 8.days.from_now))
+        get :index
+      end
+      
+      should "not show past events" do
+        assert ! assigns(:events).include?(@past)
+      end
+
+      should "show present events" do
+        assert_contains assigns(:events), @present
+      end
+
+      should "not show future events" do
+        assert_does_not_contain assigns(:events), @future
+      end
+    end
   end
 
   context 'when creating an event' do
