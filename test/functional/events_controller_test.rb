@@ -61,9 +61,13 @@ class EventsControllerTest < ActionController::TestCase
     context "with events in the past, present, and future" do
       setup do
         @past = Event.create!(valid_event_attributes(:date => 1.days.ago))
-        @present = Event.create!(valid_event_attributes)
+        @present = Event.create!(valid_event_attributes(:topic => "Waldo"))
         @future = Event.create!(valid_event_attributes(:date => 8.days.from_now))
         get :index
+      end
+
+      should "contain the topic of the present event" do
+        assert_select "Waldo"
       end
       
       should "not show past events" do
