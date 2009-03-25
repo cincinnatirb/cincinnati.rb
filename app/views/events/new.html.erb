@@ -1,32 +1,34 @@
+<h1>Create New Event</h1>
+
 <%= error_messages_for :event -%>
 
 <% form_for :event, @event, :url => events_path do |f| -%>
   <p>
-    <label for='user'>User:</label>
+    <label for='user'>User</label><br />
     <%= text_field_tag :user %>
   </p>
   <p>
-    <label for='password'>Password:</label>
+    <label for='password'>Password</label><br />
     <%= password_field_tag :password %>
   </p>
   <p>
-    <%= f.label :location_id %>
+    <%= f.label :location_id %><br />
     <%= f.text_field :location_id %>
   </p>
   <p>
-    <%= f.label :topic %>
+    <%= f.label :topic %><br />
     <%= f.text_field :topic %>
   </p>
   <p>
-    <%= f.label :date %>
+    <%= f.label :date %><br />
     <%= f.text_field :date %>
   </p>
   <p>
-    <%= f.label :start_time %>
+    <%= f.label :start_time %><br />
     <%= f.text_field :start_time %>
   </p>
   <p>
-    <%= f.label :duration %>
+    <%= f.label :duration %><br />
     <%= f.text_field :duration %>
   </p>
 
