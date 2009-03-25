@@ -66,8 +66,10 @@ class EventsControllerTest < ActionController::TestCase
         get :index
       end
 
-      should "contain the topic of the present event" do
-        assert_select "Waldo"
+      should "contain all values for the present event" do
+        %w[ date topic start_time duration ].each do |key|
+          assert_select "td", @present[key]
+        end
       end
       
       should "not show past events" do
