@@ -16,6 +16,13 @@
 * Admin can delete events (requires authentication)
 ** delete link?
 
+* Listing of ALL events versus the "present" ones for a sidebar
+* Location model
+* select list for locations on new event form
+** choice for "new location" should auto-create a location and redirect you to the edit page to fix it's name/address/GPS/contact/etc.
+
+
+
 * Google group members can RSVP
 * View aggregated twitterfeed from all members
 * View aggregated blog postings from all members

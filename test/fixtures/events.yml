@@ -1,0 +1,119 @@
+mtg2008_11_18:
+  date: 2008-11-18 18:30
+  location_id: 1
+  topic: Inagural Meeting
+  start_time: 2008-11-18 18:30
+  duration: 7200
+  created_at: 2008-11-18 18:30
+mtg2008_11_25:
+  date: 2008-11-25 18:30
+  location_id: 3
+  topic: Let's Make a Project!
+  start_time: 2008-11-25 18:30
+  duration: 7200
+  created_at: 2008-11-25 18:30
+mtg2008_12_09:
+  date: 2008-12-09 18:30
+  location_id: 3
+  topic: Hi Jim!
+  start_time: 2008-12-09 18:30
+  duration: 7200
+  created_at: 2008-12-09 18:30
+mtg2008_12_16:
+  date: 2008-12-16 18:30
+  location_id: 1
+  topic: Let it Snow! Let it Snow! Let it Snow!
+  start_time: 2008-12-16 18:30
+  duration: 0
+  created_at: 2008-12-16 18:30
+mtg2008_12_30:
+  date: 2008-12-30 18:30
+  location_id: 1
+  topic: How Many Rubyists Does It Take To Make A Meeting?
+  start_time: 2008-12-30 18:30
+  duration: 7200
+  created_at: 2008-12-30 18:30
+mtg2009_01_13:
+  date: 2009-01-13 18:30
+  location_id: 1
+  topic: Cancelled? Heck NO!
+  start_time: 2009-01-13 18:30
+  duration: 7200
+  created_at: 2009-01-13 18:30
+mtg2009_01_20:
+  date: 2009-01-20 18:30
+  location_id: 2
+  topic: Chris Nelson's edit_me plugin
+  start_time: 2009-01-20 18:30
+  duration: 7200
+  created_at: 2009-01-20 18:30
+mtg2009_02_10:
+  date: 2009-02-10 18:30
+  location_id: 1
+  topic: More on the Project
+  start_time: 2009-02-10 18:30
+  duration: 7200
+  created_at: 2009-02-10 18:30
+mtg2009_02_16:
+  date: 2009-02-16 16:00
+  location_id: 4
+  topic: Yehuda Katz at Columbus Ruby Brigade
+  start_time: 2009-02-16 18:30
+  duration: 7200
+  created_at: 2009-02-16 18:30
+mtg2009_02_24:
+  date: 2009-02-24 18:30
+  location_id: 1
+  topic: More on the Project
+  start_time: 2009-02-24 18:30
+  duration: 7200
+  created_at: 2009-02-24 18:30
+mtg2009_03_10:
+  date: 2009-03-10 18:30
+  location_id: 1
+  topic: How many gems d'you got?
+  start_time: 2009-03-10 18:30
+  duration: 7200
+  created_at: 2009-03-10 18:30
+mtg2009_03_17:
+  date: 2009-03-17 18:30
+  location_id: 2
+  topic: Return nil or raise exception? THAT is the question!
+  start_time: 2009-03-17 18:30
+  duration: 7200
+  created_at: 2009-03-17 18:30
+mtg2009_03_24:
+  date: 2009-03-24 18:30
+  location_id: 1
+  topic: Snaring another OINK-PUG member...
+  start_time: 2009-03-24 18:30
+  duration: 9000
+  created_at: 2009-03-24 18:30
+mtg2009_03_31:
+  date: 2009-03-31 18:30
+  location_id: 1
+  topic: 5th Tuesday! Presentation / Speaker?
+  start_time: 2009-03-31 18:30
+  duration: 7200
+  created_at: 2009-03-31 18:30
+mtg2009_04_14:
+  date: 2009-04-14 18:30
+  location_id: 1
+  topic: 2nd Tuesday Newbie Night?
+  start_time: 2009-04-14 18:30
+  duration: 7200
+  created_at: 2009-04-14 18:30
+mtg2009_04_21:
+  date: 2009-04-21 18:30
+  location_id: 2
+  topic: 3rd Tuesday
+  start_time: 2009-04-21 18:30
+  duration: 7200
+  created_at: 2009-04-21 18:30
+mtg2009_04_28:
+  date: 2009-04-28 18:30
+  location_id: 1
+  topic: 4th Tuesday
+  start_time: 2009-04-28 18:30
+  duration: 7200
+  created_at: 2009-04-28 18:30
