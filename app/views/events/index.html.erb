@@ -12,7 +12,7 @@
       <tr>
         <td class="topic"><%= event.topic %></td>
         <td class="date"><%= event.date %></td>
-        <td class="start_time"><%= event.start_time.to_s(:time) %></td>
+        <td class="start_time"><%= event.start_time.to_s(:hhmm_p) %></td>
         <td class="duration"><%= distance_of_time_in_words event.duration %></td>
       </tr>
     <% end %>
