@@ -50,14 +50,14 @@ class EventsControllerTest < ActionController::TestCase
   def test_event_should_be_valid
     assert Event.new(valid_event_attributes).valid?
   end
-  
+
   context 'show events listing' do
     setup do
       get :index
     end
     should_respond_with :success
     should_assign_to :events
-    
+
     context "with events in the past, present, and future" do
       setup do
         @past = Event.create!(valid_event_attributes(:date => 1.days.ago))
@@ -67,11 +67,15 @@ class EventsControllerTest < ActionController::TestCase
       end
 
       should "contain all values for the present event" do
-        %w[ date topic start_time duration ].each do |key|
-          assert_select "td", @present[key].to_s
+        %w[ date topic start_time ].each do |key|
+          assert_select "td.#{key}", @present[key].to_s
         end
       end
-      
+
+      should "check for duration units" do
+        assert_select "td.duration", /\d+.*hour/
+      end
+
       should "not show past events" do
         assert ! assigns(:events).include?(@past)
       end
@@ -82,10 +86,6 @@ class EventsControllerTest < ActionController::TestCase
 
       should "not show future events" do
         assert_does_not_contain assigns(:events), @future
-      end
-      
-      should "check for duration units" do
-        assert_select "td.duration", /\d+.*hour/
       end
     end
   end
@@ -111,7 +111,7 @@ class EventsControllerTest < ActionController::TestCase
       post :create, :user => User::Admin['user'],
                     :password => User::Admin['password'],
                     :event => { :date => '12/9/2008',
-                                :start_time => "18:30" } 
+                                :start_time => "18:30" }
     end
     should_render_template :new
 
