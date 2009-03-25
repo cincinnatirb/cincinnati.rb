@@ -47,7 +47,7 @@ class EventsControllerTest < ActionController::TestCase
     }.merge(options)
   end
 
-  def test_event_should_be_valid
+  def test__event_should_be_valid
     assert Event.new(valid_event_attributes).valid?
   end
 
@@ -67,8 +67,13 @@ class EventsControllerTest < ActionController::TestCase
       end
 
       should "contain all values for the present event" do
-        %w[ date topic start_time ].each do |key|
+        %w[ date topic  ].each do |key|
           assert_select "td.#{key}", @present[key].to_s
+        end
+      end
+      should "show start_time with no date" do
+        assert_raises(Test::Unit::AssertionFailedError, "should not find year in start_time") do
+          assert_select "td.start_time", /#{@present.start_time.year}/
         end
       end
 

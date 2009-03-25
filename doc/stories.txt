@@ -1,12 +1,21 @@
 
 * Home page info transferred over   **** DONE!!!!!!
-
 * Knowing the User/Password permits authentication **DONE
+* Admin can create events (requires authentication) **DONE
+* Anyone can view events **DONE
 
-* Admin can create events (requires authentication)
-* Anyone can view events
+* start_time should only be time (no date component)
+
+* date and start_time redundant
+* link for new event?
+
+* logo should link to home page
+
 * Admin can update events (requires authentication)
+** edit link?
 * Admin can delete events (requires authentication)
+** delete link?
+
 * Google group members can RSVP
 * View aggregated twitterfeed from all members
 * View aggregated blog postings from all members
