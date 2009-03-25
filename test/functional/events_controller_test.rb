@@ -68,7 +68,7 @@ class EventsControllerTest < ActionController::TestCase
 
       should "contain all values for the present event" do
         %w[ date topic start_time duration ].each do |key|
-          assert_select "td", @present[key]
+          assert_select "td", @present[key].to_s
         end
       end
       
@@ -82,6 +82,10 @@ class EventsControllerTest < ActionController::TestCase
 
       should "not show future events" do
         assert_does_not_contain assigns(:events), @future
+      end
+      
+      should "check for duration units" do
+        assert_select "td.duration", /\d+.*hour/
       end
     end
   end

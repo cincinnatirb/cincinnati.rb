@@ -1,7 +1,17 @@
-<ul>
+<table>
+	<tr><th>Topics</th>
+		<th>Date</th>
+		<th>Start</th>
+		<th>Duration</th></tr>
 <% @events.each do |event| %>
 
-<li><%= event.topic %></li>
+<tr>
+	<td><%= event.topic %></td>
+	<td><%= event.date %></td>
+	<td><%= event.start_time %></td>
+	<td class="duration"><%= event.duration %></td>
+	</tr>
+
 
 <% end %>
-</ul>
+</table>
