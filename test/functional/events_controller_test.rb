@@ -77,6 +77,10 @@ class EventsControllerTest < ActionController::TestCase
         end
       end
 
+      should "show hours and minutes" do
+        assert_select "td.start_time", /[^:]\d{1,2}:\d{2}\s+(am|pm)/i
+      end
+      
       should "check for duration units" do
         assert_select "td.duration", /\d+.*hour/
       end
