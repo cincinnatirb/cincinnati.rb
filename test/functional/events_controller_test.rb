@@ -31,8 +31,7 @@ class EventsControllerTest < ActionController::TestCase
   def test_admin_can_create_event
     assert_difference "Event.count" do
       post(:create, :user => User::Admin['user'], :password => User::Admin['password'],
-           :event => {:date => '12/9/2008',
-             :start_time => "18:30", :location_id => 1})
+           :event => {:date => '12/9/2008', :location_id => 1})
       assert_redirected_to events_path
     end
   end
@@ -41,7 +40,6 @@ class EventsControllerTest < ActionController::TestCase
     {
       :date => 2.days.from_now,
       :topic => "Cincinnati.rb Rocks",
-      :start_time => Time.parse("18:30") + 2.days,
       :duration => 2.hours,
       :location_id => 1,
     }.merge(options)
@@ -109,7 +107,10 @@ class EventsControllerTest < ActionController::TestCase
       assert_select "form[action=?]", events_path
     end
     should_have_fields :user, :password
-    should_have_fields :location_id, :start_time, :date, :topic, :duration, :for => :event
+    should_have_fields :location_id, :topic, :duration, :for => :event
+    should "have a date select control" do
+      assert_select "#event_date_1i"
+    end
     should "have a submit button" do
       assert_select "input[type='submit']"
     end
@@ -119,8 +120,7 @@ class EventsControllerTest < ActionController::TestCase
     setup do
       post :create, :user => User::Admin['user'],
                     :password => User::Admin['password'],
-                    :event => { :date => '12/9/2008',
-                                :start_time => "18:30" }
+                    :event => { :date => '12/9/2008' }
     end
     should_render_template :new
 
