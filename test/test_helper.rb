@@ -33,7 +33,17 @@ class Test::Unit::TestCase
   #
   # Note: You'll currently still have to declare fixtures explicitly in integration tests
   # -- they do not yet inherit this setting
-  fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+end
+
+
+def valid_event_attributes(options = {})
+  {
+    :date => 2.days.from_now,
+    :topic => "Cincinnati.rb Rocks",
+    :duration => 2.hours,
+    :location_id => 1,
+  }.merge(options)
 end

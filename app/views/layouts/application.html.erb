@@ -35,7 +35,15 @@
 	    excellent <a href="http://agileroundtable.org/">Agile Roundtable</a> meetings, which
 	    you should also attend.
           </p>
-          <%= yield :next_meeting %>
+        </div>
+
+        <div id="next_event" class="box">
+          <p>
+	          <b>Next Meeting</b>
+          </p>
+          <p class="last">
+            <%=h @next_event.topic if @next_event %>
+          </p>
         </div>
 
         <div class="box" style="background:#fed;">

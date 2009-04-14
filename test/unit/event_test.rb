@@ -21,4 +21,12 @@ class EventTest < Test::Unit::TestCase
 
   should_belong_to :location
   should_validate_presence_of :location_id
+
+  should "return next event" do
+    @past = Event.create!(valid_event_attributes(:date => 1.days.ago))
+    @soon = Event.create!(valid_event_attributes(:date => 5.days.from_now))
+    @later = Event.create!(valid_event_attributes(:date => 8.days.from_now))
+    assert_equal @soon, Event.next
+  end
+
 end

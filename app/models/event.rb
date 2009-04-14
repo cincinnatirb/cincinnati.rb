@@ -11,4 +11,9 @@ class Event < ActiveRecord::Base
     self.date
   end
 
+  def self.next
+    Event.first(:conditions => ['date >= ?', Date.today],
+                :order => 'date asc')
+  end
+
 end

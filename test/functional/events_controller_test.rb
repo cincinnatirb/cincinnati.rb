@@ -36,15 +36,6 @@ class EventsControllerTest < ActionController::TestCase
     end
   end
 
-  def valid_event_attributes(options = {})
-    {
-      :date => 2.days.from_now,
-      :topic => "Cincinnati.rb Rocks",
-      :duration => 2.hours,
-      :location_id => 1,
-    }.merge(options)
-  end
-
   def test__event_should_be_valid
     assert Event.new(valid_event_attributes).valid?
   end
@@ -127,6 +118,14 @@ class EventsControllerTest < ActionController::TestCase
     should "display error and retain entered values" do
       assert_select ".fieldWithErrors"
     end
+  end
+
+  should 'display next event on home page' do
+    topic = 'Make Controller Demo by Situ'
+    @future = Event.create!(valid_event_attributes(:topic => topic, :date => 8.days.from_now))
+    get :index
+    assert_select 'div#next_event'
+    assert_match Regexp.new(topic), @response.body
   end
 
 end
