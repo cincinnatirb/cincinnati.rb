@@ -36,16 +36,19 @@
 	    you should also attend.
           </p>
         </div>
-
+            <% if @next_event %>
         <div id="next_event" class="box">
           <p>
 	          <b>Next Meeting</b>
           </p>
           <p class="last">
-            <%=h @next_event.topic if @next_event %>
+            <%=h @next_event.topic %>
+            <%=h @next_event.location["name"] %>
+            <%=h @next_event.start_time.to_s(:hhmm_p) %>
+            <%=h "#{@next_event.duration} hours" %>
           </p>
         </div>
-
+        <% end %>
         <div class="box" style="background:#fed;">
           Want more information?<br />
           <a href="mailto:cincinnatirb@gmail.com">Drop us an email</a>.

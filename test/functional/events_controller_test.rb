@@ -122,10 +122,19 @@ class EventsControllerTest < ActionController::TestCase
 
   should 'display next event on home page' do
     topic = 'Make Controller Demo by Situ'
-    @future = Event.create!(valid_event_attributes(:topic => topic, :date => 8.days.from_now))
+    location = 'RecruitMilitary'
+    duration = 2
+    start_time = 8.days.from_now
+    loc = Location.create!(:name => 'RecruitMilitary', :address => '123 Any Street')
+    @future = Event.create!(valid_event_attributes(:topic => topic,
+                                                   :date => start_time,
+                                                   :location_id => loc.id,
+                                                   :duration => duration))
     get :index
     assert_select 'div#next_event'
-    assert_match Regexp.new(topic), @response.body
+    wanted_fields = [ topic , location, duration.to_s, start_time.to_s(:hhmm_p)]
+    wanted_fields.each do |field|
+      assert_match Regexp.new(field), @response.body
+    end
   end
-
 end
