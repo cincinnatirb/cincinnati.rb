@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Topics</th>
+      <th>Date</th>
+      <th>Start</th>
+      <th>Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td class="topic"><%= event.topic %></td>
+        <td class="date"><%= event.date %></td>
+        <td class="start_time"><%= event.start_time.to_s(:hhmm_p) %></td>
+        <td class="duration"><%= distance_of_time_in_words event.duration %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

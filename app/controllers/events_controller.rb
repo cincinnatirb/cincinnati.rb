@@ -1,5 +1,10 @@
 class EventsController < ApplicationController
+
   def index
+    @event = Event.next
+  end
+
+  def list
     @events = Event.find(:all,
                          :conditions => ["date BETWEEN ? AND ?", Time.now, 7.days.from_now])
   end

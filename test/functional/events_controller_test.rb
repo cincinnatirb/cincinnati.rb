@@ -42,7 +42,7 @@ class EventsControllerTest < ActionController::TestCase
 
   context 'show events listing' do
     setup do
-      get :index
+      get :list
     end
     should_respond_with :success
     should_assign_to :events
@@ -52,7 +52,7 @@ class EventsControllerTest < ActionController::TestCase
         @past = Event.create!(valid_event_attributes(:date => 1.days.ago))
         @present = Event.create!(valid_event_attributes(:topic => "Waldo"))
         @future = Event.create!(valid_event_attributes(:date => 8.days.from_now))
-        get :index
+        get :list
       end
 
       should "contain all values for the present event" do

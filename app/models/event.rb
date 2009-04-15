@@ -12,7 +12,7 @@ class Event < ActiveRecord::Base
   end
 
   def self.next
-    Event.first(:conditions => ['date >= ?', Date.today],
+    Event.first(:conditions => ['date >= ?', Time.zone.now],
                 :order => 'date asc')
   end
 
