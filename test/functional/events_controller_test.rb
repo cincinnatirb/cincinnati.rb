@@ -49,25 +49,28 @@ class EventsControllerTest < ActionController::TestCase
 
     context "with events in the past, present, and future" do
       setup do
-        @past = Event.create!(valid_event_attributes(:date => 1.days.ago))
-        @present = Event.create!(valid_event_attributes(:topic => "Waldo"))
-        @future = Event.create!(valid_event_attributes(:date => 8.days.from_now))
+        loc = Location.create!(:name => 'RecruitMilitary', :address => '123 Any Street')
+        @past = Event.create!(valid_event_attributes(:date => 1.days.ago, :location_id => loc.id))
+        @present = Event.create!(valid_event_attributes(:topic => "Waldo", :location_id => loc.id))
+        @future = Event.create!(valid_event_attributes(:date => 8.days.from_now, :location_id => loc.id))
         get :list
       end
 
       should "contain all values for the present event" do
-        %w[ date topic  ].each do |key|
-          assert_select "td.#{key}", @present[key].to_s
-        end
+        assert_match Regexp.new(@present.topic), @response.body
+        assert_match Regexp.new(@present.pretty_date), @response.body
+        assert_match Regexp.new(@present.start_time), @response.body
+        assert_match Regexp.new(@present.pretty_duration), @response.body
       end
+
       should "show start_time with no date" do
         assert_raises(Test::Unit::AssertionFailedError, "should not find year in start_time") do
-          assert_select "td.start_time", /#{@present.start_time.year}/
+          assert_select "td.start_time", /#{@present.date.year}/
         end
       end
 
       should "show hours and minutes" do
-        assert_select "td.start_time", /[^:]\d{1,2}:\d{2}\s+(am|pm)/i
+        assert_select "td.start_time", /^ *(1[0-2]|[1-9]):[0-5][0-9] *(a|p|A|P)(m|M) *$/
       end
       
       should "check for duration units" do
@@ -121,20 +124,20 @@ class EventsControllerTest < ActionController::TestCase
   end
 
   should 'display next event on home page' do
-    topic = 'Make Controller Demo by Situ'
-    location = 'RecruitMilitary'
-    duration = 2
-    start_time = 8.days.from_now
-    loc = Location.create!(:name => 'RecruitMilitary', :address => '123 Any Street')
+    topic         = 'Make Controller Demo by Situ'
+    location_name = 'RecruitMilitary'
+    duration      = '2 hours'
+    start_time    = '8:00 PM'
+    loc = Location.create!(:name => location_name, :address => '123 Any Street')
     @future = Event.create!(valid_event_attributes(:topic => topic,
-                                                   :date => start_time,
+                                                   :date => '1/1/2010 8:00PM',
                                                    :location_id => loc.id,
-                                                   :duration => duration))
+                                                   :duration => 2))
     get :index
     assert_select 'div#next_event'
-    wanted_fields = [ topic , location, duration.to_s, start_time.to_s(:hhmm_p)]
-    wanted_fields.each do |field|
-      assert_match Regexp.new(field), @response.body
+    wanted_info = [ topic, location_name, duration, start_time ]
+    wanted_info.each do |info|
+      assert_match Regexp.new(info), @response.body
     end
   end
 end
