@@ -42,10 +42,11 @@
               <b>Next Meeting</b>
             </p>
             <p class="last">
-              <%=h @next_event.topic %>
-              <%=h @next_event.location_name %>
-              <%=h @next_event.start_time %>
-              <%=h @next_event.pretty_duration %>
+              <%=h @next_event.pretty_date %><br />
+              <%=h @next_event.topic %><br />
+              <%=h @next_event.location_name %><br />
+              <%=h @next_event.start_time %><br />
+              approx. <%=h @next_event.pretty_duration %>
             </p>
           </div>
         <% end %>
