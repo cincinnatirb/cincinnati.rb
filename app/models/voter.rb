@@ -3,7 +3,7 @@ require 'mechanize'
 
   PEOPLE = [
     ['Ryan','Walker','ry@anotherventure.com'],
-    ['Michael','Guterl','mguterl.com'],
+    ['Michael','Guterl','mguterl@gmail.com'],
     ['Rene','Barnett','rene.barnett@gmail.com'],
     ]
 
