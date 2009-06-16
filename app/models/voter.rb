@@ -4,6 +4,7 @@ require 'mechanize'
   PEOPLE = [
     ['Ryan','Walker','ry@anotherventure.com'],
     ['Michael','Guterl','mguterl.com'],
+    ['Rene','Barnett','rene.barnett@gmail.com'],
     ]
 
   def self.execute
