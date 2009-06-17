@@ -12,6 +12,7 @@ end
 class Voter
   PEOPLE = [
             %w[ Ryan Walker ry@anotherventure.com ],
+            %w[ Www Guru wwwguru@gmail.com ],
             %w[ Bill Barnett bill@budgetsketch.com ],
             %w[ Michael Guterl mguterl@gmail.com ],
             %w[ Rene Barnett rene.barnett@gmail.com ],
