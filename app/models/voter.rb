@@ -27,6 +27,7 @@ class Voter
             %w[ Mike Barnett mbarnett@ka-partners.com ],
             %w[ Mike Barnett mbarnett@smartcloudsw.com ],
             %w[ Mike Barnett mwbarnett@comcast.net ],
+            %w[ Elizabeth Naramore elizabeth.naramore@gmail.com ],
            ]
 
   def self.execute
