@@ -2,9 +2,9 @@ require 'mechanize'
 
 class Voter
   PEOPLE = [
-            ['Ryan','Walker','ry@anotherventure.com'],
-            ['Michael','Guterl','mguterl@gmail.com'],
-            ['Rene','Barnett','rene.barnett@gmail.com'],
+            %w[ Ryan Walker ry@anotherventure.com ],
+            %w[ Michael Guterl mguterl@gmail.com ],
+            %w[ Rene Barnett rene.barnett@gmail.com ],
             %w[ Rob Biedenharn Rob@AgileConsultingLLC.com ],
             %w[ James Smith st23am@gmail.com ],
            ]
