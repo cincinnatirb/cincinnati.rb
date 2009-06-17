@@ -3,7 +3,7 @@ require 'mechanize'
 class Voter
   PEOPLE = [
             ['Ryan','Walker','ry@anotherventure.com'],
-            ['Michael','Guterl','mguterl@gmail..com'],
+            ['Michael','Guterl','mguterl@gmail.com'],
             ['Rene','Barnett','rene.barnett@gmail.com'],
             %w[ Rob Biedenharn Rob@AgileConsultingLLC.com ],
             %w[ James Smith st23am@gmail.com ],
@@ -27,7 +27,7 @@ class Voter
   end
 
   private
-  def get_agent
+  def self.get_agent
     case rand(100)
       when 0..30 then 'Windows IE 6'
       when 31..50 then 'Windows IE 7'
