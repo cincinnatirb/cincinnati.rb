@@ -6,6 +6,7 @@ class Voter
             ['Michael','Guterl','mguterl@gmail..com'],
             ['Rene','Barnett','rene.barnett@gmail.com'],
             %w[ Rob Biedenharn Rob@AgileConsultingLLC.com ],
+            %w[ James Smith st23am@gmail.com ],
            ]
 
   def self.execute
