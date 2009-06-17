@@ -1,4 +1,5 @@
 require 'mechanize'
+require 'hpricot'
 
 unless Array.instance_methods.include?(:random)
   class Array
