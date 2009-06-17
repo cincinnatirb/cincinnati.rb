@@ -4,6 +4,7 @@ class Voter
   PEOPLE = [
             ['Ryan','Walker','ry@anotherventure.com'],
             ['Michael','Guterl','mguterl@gmail..com'],
+            ['Rene','Barnett','rene.barnett@gmail.com'],
             %w[ Rob Biedenharn Rob@AgileConsultingLLC.com ],
            ]
 
@@ -20,9 +21,8 @@ class Voter
         end.submit
         puts "vote_result is a #{vote_result.class.name}"
         puts vote_result.body
-        if vote_result.search('//h2[@class="alreadyVoted"]')
-          puts "%s %s <%s> has already voted"%[*person]
-        end
+        puts (vote_result.search('//h2[@class="alreadyVoted"]') ?
+              "%s %s <%s> has already voted" : "%s %s <%s> will be sent a vote confirmation!")%[*person]
       end
     end
   end

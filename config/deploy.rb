@@ -134,4 +134,12 @@ namespace :deploy do
      run "ln -nfs #{shared_path}/config/admin.yml #{current_path}/config/admin.yml"
      run "ln -nfs #{shared_path}/config/database.yml #{current_path}/config/database.yml"
   end
+
+    after "deploy:symlink", "deploy:update_crontab"
+
+  desc "Update the crontab file"
+  task :update_crontab, :roles => :db do
+    run "cd #{release_path} && whenever --update-crontab #{application}"
+  end
+
 end
