@@ -32,14 +32,7 @@ class Voter
 
   private
   def self.get_agent
-    case rand(100)
-      when 0..30 then 'Windows IE 6'
-      when 31..50 then 'Windows IE 7'
-      when 51..65 then 'Windows Mozilla'
-      when 66..80 then 'Mac Safari'
-      when 81..90 then 'Mac Firefox'
-      when 95..99 then 'Mac Mozilla'
-    end
+    WWW::Mechanize::AGENT_ALIASES.keys.random
   end
 
 end
