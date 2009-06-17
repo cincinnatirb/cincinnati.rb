@@ -20,7 +20,12 @@ class Voter
             %w[ Polly Barnett polly@polly-barnett.com ],
             %w[ James Smith st23am@gmail.com ],
             %w[ Paul Visscher paulv@canonical.org ],
-            %w{Chris Nelson me@christophernelsonconsulting.com}
+            %w[ Chris Nelson me@christophernelsonconsulting.com ],
+            %w[ Mary Barnett-Dailey mdailey0506@cinci.rr.com ],
+            %w[ Bill Spurling wlspurling@bspurling.com ],
+            %w[ Mike Barnett mbarnett@ka-partners.com ],
+            %w[ Mike Barnett mbarnett@smartcloudsw.com ],
+            %w[ Mike Barnett mwbarnett@comcast.net ],
            ]
 
   def self.execute
