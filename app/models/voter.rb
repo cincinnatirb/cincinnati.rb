@@ -24,6 +24,7 @@ class Voter
 
   def self.execute
     PEOPLE.each do |person|
+      WWW::Mechanize.html_parser = Hpricot
       a = WWW::Mechanize.new { |agent|
         agent.user_agent_alias = get_agent
       }
