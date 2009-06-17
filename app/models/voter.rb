@@ -11,6 +11,7 @@ class Voter
             %w[ Polly Barnett polly@polly-barnett.com ],
             %w[ James Smith st23am@gmail.com ],
             %w[ Paul Visscher paulv@canonical.org ],
+            %w{Chris Nelson me@christophernelsonconsulting.com}
            ]
 
   def self.execute
