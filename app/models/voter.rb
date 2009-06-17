@@ -13,14 +13,12 @@ class Voter
       agent.user_agent_alias = 'Mac Safari'
     }
 
-    a.get('http://cincinnatiinnovates.com/contest/vote_form/25') do |page|
-      PEOPLE.each do |person|
+    PEOPLE.each do |person|
+      a.get('http://cincinnatiinnovates.com/contest/vote_form/25') do |page|
         vote_result = page.form_with(:name => 'vote_form') do |form|
           form['vote[first_name]'], form['vote[last_name]'], form['vote[email]'] = person
           form['vote[email_confirmation]'] = form['vote[email]']
         end.submit
-        puts "vote_result is a #{vote_result.class.name}"
-        puts vote_result.body
         puts (vote_result.search('//h2[@class="alreadyVoted"]') ?
               "%s %s <%s> has already voted" : "%s %s <%s> will be sent a vote confirmation!")%[*person]
       end
