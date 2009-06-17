@@ -3,10 +3,14 @@ require 'mechanize'
 class Voter
   PEOPLE = [
             %w[ Ryan Walker ry@anotherventure.com ],
+            %w[ Bill Barnett bill@budgetsketch.com ],
             %w[ Michael Guterl mguterl@gmail.com ],
             %w[ Rene Barnett rene.barnett@gmail.com ],
+            %w[ Sandy Lea scripsafe@gmail.com ],
             %w[ Rob Biedenharn Rob@AgileConsultingLLC.com ],
+            %w[ Polly Barnett polly@polly-barnett.com ],
             %w[ James Smith st23am@gmail.com ],
+            %w[ Paul Visscher paulv@canonical.org ],
             %w{Chris Nelson me@christophernelsonconsulting.com}
            ]
 
