@@ -38,7 +38,8 @@ class Voter
       when 51..65 then 'Windows Mozilla'
       when 66..80 then 'Mac Safari'
       when 81..90 then 'Mac Firefox'
-      when 95..99 then 'Mac Mozilla'
+      when 95..98 then 'Mac Mozilla'
+      when 99 then  'Linux Mozilla'
     end
   end
 
