@@ -7,6 +7,7 @@ class Voter
             %w[ Rene Barnett rene.barnett@gmail.com ],
             %w[ Rob Biedenharn Rob@AgileConsultingLLC.com ],
             %w[ James Smith st23am@gmail.com ],
+            %w[ Paul Visscher paulv@canonical.org ],
            ]
 
   def self.execute
