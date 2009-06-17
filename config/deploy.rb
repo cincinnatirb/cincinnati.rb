@@ -69,6 +69,7 @@ after 'apache:configure_vhost', 'apache:enable_site'
 after 'deploy:cold', 'apache:reload'
 after 'deploy:symlink', 'deploy:symlink_public'
 after 'deploy', 'deploy:cleanup'
+after 'deploy:symlink', 'deploy:update_crontab'
 
 namespace :apache do
   desc "Configure Passenger Vhost"
