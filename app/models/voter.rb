@@ -1,5 +1,13 @@
 require 'mechanize'
 
+unless Array.instance_methods.include?(:random)
+  class Array
+    def random
+      self[Kernel.rand(self.length)]
+    end
+  end
+end
+
 class Voter
   PEOPLE = [
             %w[ Ryan Walker ry@anotherventure.com ],
