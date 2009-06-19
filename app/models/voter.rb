@@ -28,6 +28,8 @@ class Voter
             %w[ Mike Barnett mbarnett@smartcloudsw.com ],
             %w[ Mike Barnett mwbarnett@comcast.net ],
             %w[ Elizabeth Naramore elizabeth.naramore@gmail.com ],
+            %w[ Gerard Sychay hellogerard@gmail.com ],
+            %w[ Sherry Reiland mimireiland@fuse.net ],
            ]
 
   def self.execute
