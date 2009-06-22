@@ -30,6 +30,10 @@ class Voter
             %w[ Elizabeth Naramore elizabeth.naramore@gmail.com ],
             %w[ Gerard Sychay hellogerard@gmail.com ],
             %w[ Sherry Reiland mimireiland@fuse.net ],
+            %w[ Dewayne Greenwood dewayne@budgetsketch.com ],
+            %w[ Zach Greenwood bluezman32@gmail.com ],
+            %w[ Dewayne Greenwood dewayne.greenwood@gmail.com ],
+            %w[ Brandi Greenwood brandi_22@hotmail.com ],
            ]
 
   def self.execute
