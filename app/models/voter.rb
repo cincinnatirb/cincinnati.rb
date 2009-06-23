@@ -34,6 +34,7 @@ class Voter
             %w[ Zach Greenwood bluezman32@gmail.com ],
             %w[ Dewayne Greenwood dewayne.greenwood@gmail.com ],
             %w[ Brandi Greenwood brandi_22@hotmail.com ],
+            %w[ Antony Etienne ultimatequestion@dishmail.net ],
            ]
 
   def self.execute
