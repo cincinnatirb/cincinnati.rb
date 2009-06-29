@@ -35,6 +35,13 @@ class Voter
             %w[ Dewayne Greenwood dewayne.greenwood@gmail.com ],
             %w[ Brandi Greenwood brandi_22@hotmail.com ],
             %w[ Antony Etienne ultimatequestion@dishmail.net ],
+            %w[ Jason Harrison jhacharrison@yahoo.com ],
+            %w[ Tiffany Baker jntbaker@yahoo.com ],
+            %w[ Jason Baker jasontiffany.baker@gmail.com ],
+            %w[ Dan Peck Kaitahn-Registrations@yahoo.com ],
+            %w[ Debbie Greenwood debbie.greenwood54@gmail.com ],
+            %w[ Jack Greenwood jdg1947@cinci.rr.com ],
+            %w[ LeeAnn Sheridan mlsheridan15@hotmail.com ],
            ]
 
   def self.execute
