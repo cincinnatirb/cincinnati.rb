@@ -42,6 +42,14 @@ class Voter
             %w[ Debbie Greenwood debbie.greenwood54@gmail.com ],
             %w[ Jack Greenwood jdg1947@cinci.rr.com ],
             %w[ LeeAnn Sheridan mlsheridan15@hotmail.com ],
+            %w[ Tate Lucus tate.lucas@gmail.com ],
+            %w[ Christy Lucus clucas@crossroads.net ],
+            %w[ Jaime Taylor jaimemtaylor@yahoo.com ],
+            %w[ Scott Taylor scott4taylor@yahoo.com ],
+            %w[ Scott Eastes Bryon.Eastes@WPAFB.AF.MIL ],
+            %w[ Scott Eastes eastesfam@yahoo.com ],
+            %w[ Jim Cropcho jim.cropcho@gmail.com ],
+            %w[ Dot Wall dwall1@cinci.rr.com ],
            ]
 
   def self.execute
