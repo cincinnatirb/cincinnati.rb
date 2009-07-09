@@ -52,7 +52,6 @@ class Voter
             %w[ Dot Wall dwall1@cinci.rr.com ],
             %w[ Joel Turnbull joelbywan@gmail.com ],
             %w[ Mark Haskamp mrhask@gmail.com ],
-            %w[ Maggie Longshore MaggieLongshore@gmail.com ],
            ]
 
   def self.execute
