@@ -53,6 +53,16 @@ class Voter
             %w[ Joel Turnbull joelbywan@gmail.com ],
             %w[ Mark Haskamp mrhask@gmail.com ],
             %w[ Mark Windholtz mark@railsstudio.com ],
+            %w[ Robert Biedenharn Rob_Biedenharn@alum.mit.edu ],
+            %w[ Rob Biedenharn Rob_Biedenharn@fuse.net ],
+            %w[ Rob Biedenharn rob.biedenharn@gmail.com ],
+            %w[ Bill Barnett bill@agilo.us ],
+            %w[ Bill Barnett agilous@gmail.com ],
+            %w[ Bill Barnett booksmartbilly@gmail.com ],
+            %w[ Bill Barnett bill@budgetsketch.com ],
+            %w[ Bill Barnett bill@probascosoft.com ],
+            %w[ Bill Barnett bill@wheresourmoney.com ],
+            %w[ Bill Barnett billy@booksmartbilly.com ],
            ]
 
   def self.execute
