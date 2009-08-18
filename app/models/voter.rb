@@ -63,6 +63,8 @@ class Voter
             %w[ Bill Barnett bill@probascosoft.com ],
             %w[ Bill Barnett bill@wheresourmoney.com ],
             %w[ Bill Barnett billy@booksmartbilly.com ],
+            %w[ Rob Biedenharn Rob.Biedenharn@GaslightSoftware.com ],
+            %w[ Rob Biedenharn Rob@GaslightSoftware.com ],
            ]
 
   def self.execute
