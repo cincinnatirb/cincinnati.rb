@@ -24,6 +24,10 @@ hr {
 	height: 10px;
 }
 
+img {
+    border: 0px;
+}
+
 /* Tables
  * --------------------------------------------------------------------- */
 table {
@@ -64,6 +68,23 @@ p.title {
     float: right;
     margin-right:20px;
     margin-top: 50px;
+}
+
+.footer {
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.footer p {
+    display: inline;
+    margin-right: 50px;
+    font-weight: bold;
+    color: gray;
+}
+
+.footer img {
+    vertical-align: top;
+    width: 150px;
 }
 
 /* EOF */
